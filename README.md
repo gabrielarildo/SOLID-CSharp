@@ -136,22 +136,6 @@ dotnet run --project DIP\Solucao\SOLID.DIP.Solucao
 > exceções lançadas) para demonstrar o problema. Nos exemplos de solução, o comportamento
 > correto é exibido.
 
-## Problemas identificados e melhorias
-
-- **SRP:** a classe `OrderService` concentrava cálculo, persistência e geração de
-  relatório. A separação em `OrderCalculator`, `OrderRepository` e `OrderReportGenerator`
-  reduziu o acoplamento e facilitou a manutenção.
-- **OCP:** o `OrderProcessor` usava `switch` sobre o método de pagamento. Com
-  `IPaymentProcessor` e polimorfismo, novos métodos (como pagamento via Bitcoin) podem ser
-  adicionados sem alterar a classe central.
-- **LSP:** a herança forçava um contrato de voo em todas as aves. Com a interface
-  `IFlyable`, apenas aves capazes de voar assumem o contrato.
-- **ISP:** a interface `IWorker` exigeia comportamentos que robôs não têm. Com
-  `IWorker` e `IPerson`, cada classe implementa apenas o que faz sentido.
-- **DIP:** o `PaymentService` dependia da implementação concreta `PayPalGateway`. Com a
-  interface `IPaymentGateway` e injeção de dependência, outros gateways (como `StripeGateway`)
-  podem ser substituídos sem alterar a lógica.
-
 ## Conclusão
 
 Os princípios SOLID são fundamentais para o desenvolvimento de software orientado a
