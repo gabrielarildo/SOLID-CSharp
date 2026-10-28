@@ -16,7 +16,6 @@ public class PayPalGateway : IPaymentGateway
     public void Charge(Payment payment) => Console.WriteLine($"Pagamento via PayPal: R$ {payment.Amount}");
 }
 
-// VIOLAÇÃO DO DIP: a classe de alto nível (PaymentService) conhece a implementação concreta (PayPalGateway).
 public class PaymentService
 {
     private readonly IPaymentGateway _gateway = new PayPalGateway();

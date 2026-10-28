@@ -1,7 +1,5 @@
 # SOLID
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 Projeto educacional em **C#/.NET** que demonstra, na prática, os cinco princípios do
 Design Orientado a Objetos conhecidos por **SOLID**:
 
@@ -161,7 +159,3 @@ objetos, especialmente em Back-End, onde sistemas crescem em complexidade e exig
 manutenção, testes e evolução contínua. Aplicá-los de forma prática melhora a qualidade,
 reduz o acoplamento, facilita testes unitários e permite que o sistema cresça com novas
 regras sem risco de regressões.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT.

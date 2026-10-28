@@ -6,15 +6,12 @@ public class Order
     public decimal Amount { get; set; }
 }
 
-// VIOLAÇÃO DO SRP: esta classe possui mais de uma responsabilidade.
-// Ela calcula o total, salva o pedido e gera o relatório.
 public class OrderService
 {
     public decimal CalculateTotal(Order order) => order.Amount;
 
     public void Save(Order order)
     {
-        // Simulação de persistência em banco de dados.
         Console.WriteLine($"Pedido {order.Id} salvo.");
     }
 

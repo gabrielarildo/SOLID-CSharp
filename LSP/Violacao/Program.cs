@@ -30,7 +30,6 @@ public class Program
         Bird bird = new Sparrow("Espaço");
         bird.Fly();
 
-        // Esperado: o pinguim voa? Não! Ele não deveria herdar o comportamento de voar.
         Bird penguin = new Penguin("Pinguim");
         penguin.Fly();
     }

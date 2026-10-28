@@ -11,8 +11,6 @@ public interface IPerson
     void Sleep();
 }
 
-// SOLUÇÃO DO ISP: a interface foi dividida em contratos menores e específicos.
-// O robô implementa apenas o que faz de fato, e o humano também.
 public class HumanWorker : IWorker, IPerson
 {
     public void Work() => Console.WriteLine("Humano trabalhando.");

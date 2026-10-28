@@ -29,15 +29,12 @@ public class CashPaymentProcessor : IPaymentProcessor
         Console.WriteLine($"Pagamento via dinheiro: R$ {order.Amount}");
 }
 
-// Novo comportamento adicionado sem alterar nenhuma classe existente.
 public class BitcoinPaymentProcessor : IPaymentProcessor
 {
     public void Process(Order order) =>
         Console.WriteLine($"Pagamento via Bitcoin: R$ {order.Amount}");
 }
 
-// SOLUÇÃO DO OCP: o processador depende de uma abstração (contrato),
-// permitindo novas implementações via polimorfismo.
 public class OrderProcessor
 {
     private readonly IPaymentProcessor _paymentProcessor;
@@ -59,7 +56,6 @@ public class Program
         var processor = new OrderProcessor(new CreditCardPaymentProcessor());
         processor.Process(order);
 
-        // Novo método de pagamento adicionado sem modificar o processador principal.
         var bitcoinProcessor = new OrderProcessor(new BitcoinPaymentProcessor());
         bitcoinProcessor.Process(order);
     }

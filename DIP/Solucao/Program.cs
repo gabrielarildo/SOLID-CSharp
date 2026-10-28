@@ -21,8 +21,6 @@ public class StripeGateway : IPaymentGateway
     public void Charge(Payment payment) => Console.WriteLine($"Pagamento via Stripe: R$ {payment.Amount}");
 }
 
-// SOLUÇÃO DO DIP: a classe de alto nível depende de uma abstração (interface),
-// recebendo a implementação por injeção de dependência.
 public class PaymentService
 {
     private readonly IPaymentGateway _gateway;

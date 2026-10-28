@@ -13,8 +13,6 @@ public enum PaymentMethod
     Cash
 }
 
-// VIOLAÇÃO DO OCP: para adicionar um novo método de pagamento,
-// é necessário modificar esta classe, alterando o método principal.
 public class OrderProcessor
 {
     public void Process(Order order, PaymentMethod paymentMethod)

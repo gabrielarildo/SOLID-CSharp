@@ -28,8 +28,6 @@ public class Penguin : Bird
     public void Swim() => Console.WriteLine($"{Name} está nadando.");
 }
 
-// SOLUÇÃO DO LSP: o comportamento de voar fica encapsulado em uma interface,
-// respeitando o contrato apenas para quem realmente sabe voar.
 public class Program
 {
     public static void Main()
@@ -37,7 +35,6 @@ public class Program
         IFlyable flyer = new Sparrow("Espaço");
         flyer.Fly();
 
-        // O pinguim não implementa a interface de voo; ele tem seu próprio comportamento.
         Bird penguin = new Penguin("Pinguim");
         Console.WriteLine(penguin);
         var swimmingBird = (Penguin)penguin;

@@ -6,7 +6,6 @@ public class Order
     public decimal Amount { get; set; }
 }
 
-// SOLUÇÃO DO SRP: cada responsabilidade foi extraída para uma classe dedicada.
 public class OrderCalculator
 {
     public decimal CalculateTotal(Order order) => order.Amount;
