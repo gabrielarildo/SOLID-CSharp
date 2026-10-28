@@ -1,0 +1,67 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+**/*.sln.docstates
+**/*.rsuser
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+.vscode/
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+nuget.exe
+
+# Test results
+TestResults/
+TestResult/
+**/*.trx
+
+# Publish
+*.pubxml
+*.pubxml.user
+*.publish.xml
+build/**/*.pubxml
+build/**/*.pubxml.user
+*.publish.xml
+*.publish.xml.user
+build/**/*.publish.xml
+build/**/*.publish.xml.user
+
+# dotnet tool install location
+.dotnet/
